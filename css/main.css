@@ -338,3 +338,8 @@ header .badges .badge{
   bottom: 0;
   right: 275px;
 }
+/* 일단 완벽하게 투명해서 화면에서 안보이게 미리 만들어놓고
+자바스크립트로 순차적으로 나타나게 할 것이다. */
+.visual .fade-in {
+  opacity: 0;
+}
