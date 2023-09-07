@@ -23,6 +23,67 @@ a {
   position: relative;
 }
 
+/* 공통적인 버튼 클래스 */
+/* 우선순위 점수 10점 */
+.btn { 
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* 혹시라도 a나 span태그에도 버튼을 적용했을때도 영향을 끼치기 위해 */
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* 여러가지 종류의 버튼 */
+/* hover를 안해도 반전된 경우는 이미 색상적용 */
+/* 우선순위 점수 20점, 클래스 선택자 2개 , 기존 버튼을 덮어쓸 수 있음*/
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+/* 우선순위 점수 30점 */
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592B18;
+}
+
+.btn.btn--gold {
+  background-color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #D9AA8A;
+}
+
+.btn.btn--white {
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
+
 
 /* HEADER */
 header {
@@ -31,6 +92,8 @@ header {
   border-bottom: 1px solid #c8c8c8;
   position: fixed;
   top: 0;
+  /* 앞으로 만들 다른 섹션보다 더 위에 있을 것이다는 의미 */
+  z-index: 1;
 }
 
 header > .inner {
@@ -223,4 +286,55 @@ header .badges .badge{
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0,0,0,.15);
   cursor: pointer;
+}
+
+/* VISUAL */
+.visual {
+  /* 헤더의 높이 값 - 헤더의 inner부분의 높이가 120px인데,
+  헤더 자체는 높이가 없어서 auto인데, 최대한 줄어들으려고 한다.
+  inner의 높이로 인해 그 이하보다 더 줄어들을 순 없습니다 */
+  margin-top: 120px;
+  background-image: url(../images/visual_bg.jpg);
+  background-position: center;
+}
+.visual .inner{
+  height: 646px;
+}
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+
+}
+.visual .title .btn {
+  /* 구조상의 부모요소로 잘 배치가 되겠구나 */
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+
+}
+.visual .cup1.text{
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+.visual .cup2.text{
+  position: absolute;
+  bottom: 321px;
+  right: 416px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  right: 275px;
 }
