@@ -418,11 +418,13 @@ header .badges .badge {
   height: 62px;
   flex-grow: 1;
 }
+
 .notice .notice-line .inner__left .swiper-slide {
   height: 62px;
   display: flex;
   align-items: center;
 }
+
 .notice .notice-line .inner__left .swiper-slide a {
   color: #fff;
 }
@@ -448,10 +450,12 @@ header .badges .badge {
   justify-content: flex-end;
   align-items: center;
 }
+
 .notice .notice-line .inner__right h2 {
   font-size: 17px;
   font-weight: 700;
 }
+
 .notice .notice-line .inner__right .toggle-promotion {
   width: 62px;
   height: 62px;
@@ -460,6 +464,7 @@ header .badges .badge {
   justify-content: center;
   align-items: center;
 }
+
 .notice .notice-line .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
 }
@@ -469,7 +474,8 @@ header .badges .badge {
   background-color: #f6f5ef;
   position: relative;
 }
-.notice .promotion .swiper-container{
+
+.notice .promotion .swiper-container {
   width: calc(819px * 3 + 20px);
   /*  width: calc(100% - 5px); */
   height: 553px;
@@ -486,13 +492,69 @@ header .badges .badge {
   transition: opacity 1s;
   position: relative;
 }
+
 .notice .promotion .swiper-slide-active {
   opacity: 1;
 }
-.notice .promotion .swiper-slide-active .btn{
+
+.notice .promotion .swiper-slide-active .btn {
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
   margin: auto;
+}
+
+.notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.notice .promotion .swiper-pagination-bullet {
+  background-color: transparent;
+  background-image: url(../images/promotion_slide_pager.png);
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  outline: none;
+}
+
+.notice .promotion .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+/* 지금 활성화된 이미지 */
+.notice .promotion .swiper-pagination-bullet-active {
+  background-image: url(../images/promotion_slide_pager_on.png);
+}
+/* 다중 선택자 - 꼭 줄바꿈해야 인지될 수 있습니다.*/
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.notice .promotion .swiper-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+.notice .promotion .swiper-next {
+  right: 50%;
+  margin-right: -480px;
+}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
+ background-color: #333;
+ color: #fff;
 }
