@@ -473,11 +473,26 @@ header .badges .badge {
   width: calc(819px * 3 + 20px);
   /*  width: calc(100% - 5px); */
   height: 553px;
-  background-color: orange;
-  text-align: center;
-  font-size: 200px;
   position: absolute;
   top: 40px;
   left: 50%;
-  margin-left: -1238.5px;
+  /* margin-left: -1238.5px; */
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
+
+/* 정가운데 이미지만 집중되게하고 나머지는 불투명하게 만듬 */
+.notice .promotion .swiper-slide {
+  opacity: .5;
+  transition: opacity 1s;
+  position: relative;
+}
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+}
+.notice .promotion .swiper-slide-active .btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
