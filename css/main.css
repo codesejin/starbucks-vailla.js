@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
 }
 
 img {
@@ -627,6 +626,7 @@ header .badges .badge {
   background-color: #333;
   overflow: hidden;
 }
+
 .youtube .youtube__area {
   width: 1920px;
   background-color: orange;
@@ -636,17 +636,19 @@ header .badges .badge {
   top: 50%;
   margin-top: calc(1920px * 9 / 16 / -2);
 }
- /* :: 가상 요소 선택자 */
-.youtube .youtube__area::before{
+
+/* :: 가상 요소 선택자 */
+.youtube .youtube__area::before {
   content: "";
   display: block;
   width: 100%;
   height: 0;
   padding-top: 56.25%;
 }
-.youtube .youtube__cover{
+
+.youtube .youtube__cover {
   background-image: url(../images/video_cover_pattern.png);
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, .3);
   position: absolute;
   top: 0;
   left: 0;
@@ -671,13 +673,40 @@ header .badges .badge {
   top: 50px;
   left: 0;
 }
+
 .youtube .floating2 {
   position: absolute;
   top: 350px;
   left: 150px;
 }
-.youtube .floating3 {
+
+/* SEASON PRODUCT */
+.season-product {
+  background-image: url('../images/season_product_bg.jpg');
+}
+
+.season-product .inner {
+  height: 400px;
+
+}
+.season-product .floating3 {
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
 }
+
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+
+.season-product .text-group .more {}
