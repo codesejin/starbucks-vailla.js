@@ -43,7 +43,7 @@ a {
 
 .btn:hover {
   background-color: #333;
-  color: #fff;
+  color: #FFF;
 }
 
 /* 여러가지 종류의 버튼 */
@@ -51,7 +51,7 @@ a {
 /* 우선순위 점수 20점, 클래스 선택자 2개 , 기존 버튼을 덮어쓸 수 있음*/
 .btn.btn--reverse {
   background-color: #333;
-  color: #fff;
+  color: #FFF;
 }
 
 /* 우선순위 점수 30점 */
@@ -64,32 +64,26 @@ a {
   color: #592B18;
   border-color: #592B18;
 }
-
 .btn.btn--brown:hover {
-  color: #fff;
+  color: #FFF;
   background-color: #592B18;
 }
-
 .btn.btn--gold {
-  background-color: #D9AA8A;
+  color: #D9AA8A;
   border-color: #D9AA8A;
 }
-
 .btn.btn--gold:hover {
-  color: #fff;
+  color: #FFF;
   background-color: #D9AA8A;
 }
-
 .btn.btn--white {
-  background-color: #fff;
-  border-color: #fff;
+  color: #FFF;
+  border-color: #FFF;
 }
-
 .btn.btn--white:hover {
   color: #333;
-  background-color: #fff;
+  background-color: #FFF;
 }
-
 
 /* HEADER */
 header {
@@ -709,4 +703,57 @@ header .badges .badge {
   margin-bottom: 15px;
 }
 
-.season-product .text-group .more {}
+.season-product .text-group .more {
+
+}
+
+
+
+/* RESERVE COFFEE */
+.reserve-coffee {
+  background-image: url(../images/reserve_bg.jpg);
+}
+.reserve-coffee .inner {
+  height: 400px;
+}
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite { 
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pick-your-favorite .inner {
+  padding: 110px 0;
+
+}
+.pick-your-favorite .text-group {
+  margin-left: 100px;
+  display: flex; /* 수펑정렬 */
+  width: 362px;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* 우측 정렬 - 수평의 끝점에 맞추기 */
+}
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
+}
