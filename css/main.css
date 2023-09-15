@@ -85,6 +85,36 @@ a {
   background-color: #FFF;
 }
 
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+/* 일치선택자 왼쪽에서 오른쪽으로 나타나는 애니메이션*/
+.back-to-position.to-right{
+  transform: translateX(-150px);
+}
+/* 오른쪽에서 왼쪽으로 나타나는 애니메이션 */
+.back-to-position.to-left{
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  /* 전환효과를 통해 요소의 전상태와 후상태를 자연스럽게 처리할때 처리가 지연시간을 통해 몇 초 뒤에 실행될지 정함 */
+  /* 기본값이 0인걸 알지만 여러개가 있으므로 명시적으로 작성 */
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: .9s;
+}
 /* HEADER */
 header {
   width: 100%;
