@@ -75,7 +75,21 @@ new Swiper('.promotion .swiper-container', {
     prevEl: '.promotion .swiper-prev', // 이전 버튼 선택자
     nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
   }
-})
+});
+
+
+new Swiper('.awards .swiper-container', {
+  // direction: 'horizontal' - 기본값
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 5, // 하나의 화면에 몇개의 슬라이드가 보일 것인지
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+});
+
 
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
