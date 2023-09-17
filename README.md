@@ -2,8 +2,7 @@
 --
 스타벅스 랜딩 페이지(홈페이지)를 만드는 예제입니다.
 
-
-![image](https://github.com/codesejin/starbucks-vailla.js/assets/101460733/5d1b3fe7-919c-4306-a9b8-b84e04a70c48)
+<iframe width="640" height="360" src="https://www.youtube.com/watch?v=7w8BDf8ZaVM" frameborder="0" allowfullscreen></iframe>
 
 
 ## 문자 인코딩(Character Encoding) 설정
