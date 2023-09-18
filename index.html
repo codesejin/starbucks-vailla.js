@@ -28,19 +28,25 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="./css/main.css">
 
+  <!-- GSAP & ScrollToPlugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
     integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
     integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"
+    integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--Swiper-->
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 
   <!-- ScrollMagic -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script defer src="./js/youtube.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
@@ -378,7 +384,7 @@
 
     <div class="badges">
       <div class="badge">
-        <img src="./images/badge1.jpg" alt="Badge">
+        <img src="./images/badge3.jpg" alt="Badge">
       </div>
       <div class="badge">
         <img src="./images/badge2.jpg" alt="Badge">
@@ -550,7 +556,7 @@
 
   <!-- PICK YOUR FAVORITE -->
   <section class="pick-your-favorite scroll-spy">
-    <div class="inner"> 
+    <div class="inner">
 
       <div class="text-group">
         <img src="./images/favorite_text1.png" alt="" class="title back-to-position to-right delay-0" />
@@ -683,6 +689,11 @@
       <img src="./images/starbucks_logo_only_text.png" alt="" class="logo" />
     </div>
   </footer>
+
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
 
 </body>
 

@@ -17,6 +17,7 @@ searchInputEl.addEventListener('blur', function () {
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 // 화면자체에 스크롤 이벤트를 추가해서, 스크롤되면 함수를 실행하겠다는 의미
 window.addEventListener('scroll', _.throttle(function () {
@@ -28,11 +29,19 @@ window.addEventListener('scroll', _.throttle(function () {
       opacity: 0,
       display: 'none'
     });
+    // 버튼 보이기!
+    gsap.to(toTopEl, .2, {
+      x: 0 // x축으로 이동
+    });
   } else {
     // 배지 보여주기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
+    });
+    // 버튼 숨기기! 
+    gsap.to(toTopEl, .2, {
+      x: 100 // x축으로 이동
     });
   }
 }, 300));
@@ -48,6 +57,12 @@ fadeEls.forEach(function (fadeEl, index) {
   });
 });
 
+toTopEl.addEventListener('click', function() {
+  gsap.to(window, .7, {
+    // 플러그인이 있어야 scrollTo 사용 가능
+    scrollTo: 0 // 화면의 위치를 0px로 옮겨주겠다.
+  });
+});
 
 // NOTICE
 
