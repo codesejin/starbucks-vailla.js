@@ -1,8 +1,11 @@
 ☕ STARBUCKS
 --
-스타벅스 랜딩 페이지(홈페이지)를 만드는 예제입니다.
+스타벅스 랜딩 페이지(홈페이지)를 만드는 예제입니다. <br />
+https://tubular-centaur-ff98f1.netlify.app/
 
-![스타벅스 예제](https://user-images.githubusercontent.com/101460733/265859179-5d1b3fe7-919c-4306-a9b8-b84e04a70c48.png)
+![GIFMaker_me](https://github.com/codesejin/starbucks-vailla.js/assets/101460733/b32a3107-97b9-4343-9ce0-2e6606d778c4)
+
+
 
 ## 문자 인코딩(Character Encoding) 설정
 
