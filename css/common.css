@@ -1,0 +1,406 @@
+/* COMMON */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+  display: block;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  /* 가운데 정렬을 하는 inner클래스 */
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 공통적인 버튼 클래스 */
+/* 우선순위 점수 10점 */
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* 혹시라도 a나 span태그에도 버튼을 적용했을때도 영향을 끼치기 위해 */
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #FFF;
+}
+
+/* 여러가지 종류의 버튼 */
+/* hover를 안해도 반전된 경우는 이미 색상적용 */
+/* 우선순위 점수 20점, 클래스 선택자 2개 , 기존 버튼을 덮어쓸 수 있음*/
+.btn.btn--reverse {
+  background-color: #333;
+  color: #FFF;
+}
+
+/* 우선순위 점수 30점 */
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #FFF;
+  background-color: #592B18;
+}
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  color: #FFF;
+  background-color: #D9AA8A;
+}
+.btn.btn--white {
+  color: #FFF;
+  border-color: #FFF;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #FFF;
+}
+
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+/* 일치선택자 왼쪽에서 오른쪽으로 나타나는 애니메이션*/
+.back-to-position.to-right{
+  transform: translateX(-150px);
+}
+/* 오른쪽에서 왼쪽으로 나타나는 애니메이션 */
+.back-to-position.to-left{
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  /* 전환효과를 통해 요소의 전상태와 후상태를 자연스럽게 처리할때 처리가 지연시간을 통해 몇 초 뒤에 실행될지 정함 */
+  /* 기본값이 0인걸 알지만 여러개가 있으므로 명시적으로 작성 */
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: .9s;
+}
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  /* 앞으로 만들 다른 섹션보다 더 위에 있을 것이다는 의미 */
+  z-index: 1;
+}
+
+header>.inner {
+  height: 120px;
+}
+
+header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+
+}
+
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+/* 요소 사이에 있는 가운데 선 : 가상요소 선택자 활용 */
+header .sub-menu ul.menu li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* 가상 클래스 선택자 활용 */
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 1px 10px;
+  border: 4px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  border-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;
+}
+
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
+}
+
+header .sub-menu .search .material-icons {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+
+/* .search.focused 일치선택자 */
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+
+header .main-menu {
+  /* 각 메뉴들이 수평이 되게 만들어줌 */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+}
+
+header .main-menu .item {}
+
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* 아이템 부분에 마우스 올렸을때 hover효과를 넣을 건데,
+.item__name뒤에만 :hover를 붙이면 안된다
+왜냐하면 이름부분의 모양이 바뀌는것도 맞지만,
+ 아이템 컨텐츠 부분에도 영향이 가서 화면에 나와야 하기 떼문이다 
+ 그래서 .item부분 자체에 적용한다 */
+header .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .item .item__name {}
+
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;
+  height: 200px;
+}
+
+/* 자식 선택자를 사용한 이유?  .contents__menu안에 ul태그가 2개가 있어서 자식선택자로 명시하지 않으면
+하위 선택자가 되고, 결국 하위 선택자를 통해 컨텐츠 메뉴안에 들어가 있는 모든 내용에 영향이 끼쳐서
+바로 자식에 해당하는 ul태그로 사용했다. */
+header .main-menu .item .item__contents .contents__menu>ul {
+  /* 수평으로 정렬 */
+  display: flex;
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li {
+  width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  /* 마우스 커서를 갖다대면 화살표모양에서 손가락모양으로 변함 */
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li:hover {
+  color: #669900;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 700;
+}
+
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
+  margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+footer{
+  background-color: #272727;
+  /* 위쪽에 만든 이미지가 슬라이드되는 어워즈 섹션과 구분하기 위함 */
+  border-top: 1px solid #333;
+ }
+ footer .inner {
+   padding: 40px 0 60px 0;
+ }
+ footer .menu {
+   display: flex;
+   justify-content: center;
+ }
+ footer .menu li {
+   position: relative;
+ }
+ /* 가상요소선택자 */
+ footer .menu li::before {
+   content: "";
+   width: 3px;
+   height: 3px;
+   background-color: #555;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: -1px;
+   margin: auto;
+ }
+ footer .menu li:last-child::before{
+   display: none;
+ }
+ footer .menu li a {
+   color: #ccc; /*밝은회색*/
+   font-size: 12px;
+   font-weight: 700;
+   padding:15px;
+   display: block;
+ }
+ footer .menu li a.green {
+   color: #669900; /*초록색*/
+ }
+ footer .btn-group {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+ }
+ footer .btn-group .btn {
+   font-size: 12px;
+   margin-right: 10px;
+ }
+ footer .btn-group .btn:last-child {
+   margin-right: 0;
+ }
+ footer .info {
+   margin-top: 30px;
+   text-align: center;
+ }
+ footer .info span{
+   margin-right: 20px;
+   color: #999;
+   font-size: 12px;
+ }
+ footer .info span:last-child{
+   margin-right: 0;
+ }
+ footer .copyright {
+   color: #999;
+   font-size: 12px;
+   text-align: center;
+   margin-top: 12px;
+ }
+ footer .logo {
+   margin: 30px auto 0;
+ }
+ 
